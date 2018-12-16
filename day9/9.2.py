@@ -2,7 +2,7 @@ import re
 
 
 players, marbles = map(int, re.findall(r'\d+', open('input.txt').read()))
-# marbles *= 100
+marbles *= 100
 
 field = list([0])
 scores = [0 for i in range(1, players + 1)]
@@ -12,7 +12,6 @@ shift = -7
 ans = list()
 
 for i in range(1, marbles + 1):
-
     if i % 23:
         # print('i', i, ' curr', current, ' len', len(field))
 
@@ -37,6 +36,6 @@ for i in range(len(scores)):
         print(i)
         print(scores[i])
 
-for i in range(1, len(ans)):
-    if ans[i] != ans[i - 1]:
-        print(ans[i] - ans[i - 1])
+# for i in range(1, len(ans)):
+#     if ans[i] != ans[i - 1]:
+#         print(ans[i] - ans[i - 1])
